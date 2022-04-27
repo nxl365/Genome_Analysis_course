@@ -1,0 +1,18 @@
+script in /home/nanxi/Genome_anaysis/code/04_RNA_short_QC1.sh:
+
+#!/bin/bash -l
+#SBATCH -A uppmax2022-2-5
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 00:30:00
+#SBATCH -J Rna_shore_QC1_11
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user nanxing.liu.3019@student.uu.se
+
+module load bioinfo-tools FastQC
+
+for x in /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/untrimmed/*_11.*.fastq.gz
+do
+    fastqc $x -o /home/nanxi/Genome_anaysis/analyses/04_RNA_short_QC1; 
+done
