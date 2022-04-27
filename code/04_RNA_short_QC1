@@ -16,3 +16,11 @@ for x in /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/
 do
     fastqc $x -o /home/nanxi/Genome_anaysis/analyses/04_RNA_short_QC1; 
 done
+
+
+
+
+//download these 2 result.html from uppmax to local:
+
+rsync -P nanxi@rackham.UPPMAX.uu.se:/home/nanxi/Genome_anaysis/analyses/04_RNA_short_QC1/*.html .
+
