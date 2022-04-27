@@ -1,0 +1,20 @@
+code/05_RNA_short_trim.sh: 
+
+
+#!/bin/bash -l
+
+#SBATCH -A uppmax2022-2-5 -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 0:30:00
+#SBATCH -J Rna_trim_11
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user nanxing.liu.3019@student.uu.se 
+
+module load bioinfo-tools trimmomatic
+
+java -jar /sw/apps/bioinfo/trimmomatic/0.36/rackham/trimmomatic-0.36.jar PE  \
+/home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/untrimmed/SRR6040095_scaffold_11.1.fastq.gz \
+/home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/untrimmed/SRR6040095_scaffold_11.2.fastq.gz \
+-baseout /home/nanxi/Genome_anaysis/analyses/05_RNA_short_trim/RNA_short_trimmed.fq.gz \
+LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:50
