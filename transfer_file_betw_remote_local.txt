@@ -1,0 +1,9 @@
+intro https://www.uppmax.uu.se/support-sv/user-guides/transferring-files-2fa/ 
+ssh log in then log out once: 
+
+
+To transfer a local file to a remote comput:
+
+rsync -P scaffold_11_sequence.fasta nanxi@rackham.uppmax.uu.se:/home/nanxi/ Genome_anaysis/analyses/08_DNA_quest/
+
+
