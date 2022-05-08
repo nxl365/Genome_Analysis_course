@@ -1,0 +1,38 @@
+###########################
+samtools sort manual:
+http://www.htslib.org/doc/samtools-sort.html
+
+samtools merge manual:
+http://www.htslib.org/doc/samtools-merge.html
+############################
+
+/////anaylse/code/11_merge_bam/11_merge_bam.sh:
+
+
+#!/bin/bash -l
+
+#SBATCH -A uppmax2022-2-5
+#SBATCH -p core
+#SBATCH -n 8
+#SBATCH -t 01:00:00
+#SBATCH -J merge_11
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user nanxing.liu.3019@student.uu.se
+
+# Load modules
+module load bioinfo-tools
+module load samtools
+
+# samtools sort:
+cd /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping
+
+for file in *_11_Aligned.out.bam
+do
+	samtools sort -o /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/11_merge_bam/sort/${file}_sort.bam \
+	$file
+done
+
+# samtools merge
+
+samtools merge -o /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/11_merge_bam/merge/map_sort_merge.bam \
+/proj/genomeanalysis2022/nobackup/work/nanxi/analyses/11_merge_bam/sort/*_sort.bam
