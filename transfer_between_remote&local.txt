@@ -2,7 +2,7 @@
 ## ssh log in then log out once: 
 
 
-# To transfer a local file to a remote comput:
+### To transfer a local file to a remote comput:
 scp -r 
 rsync -P file user@machine:/destination/path/
 
@@ -10,7 +10,7 @@ rsync -P scaffold_11_sequence.fasta nanxi@rackham.uppmax.uu.se:/home/nanxi/ Geno
 
 
 
-# To transfer a file in a remote computer to our local machine:
+### To transfer a file in a remote computer to our local machine:
 
 rsync -P user@machine:/destination/path/file .         # . to the local file: /home/mobaxterm
 
