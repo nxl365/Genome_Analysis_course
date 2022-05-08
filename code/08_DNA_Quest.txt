@@ -14,10 +14,10 @@ quest.sh
 
 
 python /home/nanxi/Genome_anaysis/code/08_DNA_quest/quast-5.0.2/quast.py \
--o /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/no_refer \
+-o /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/result/no_refer \
 /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta
 
 python /home/nanxi/Genome_anaysis/code/08_DNA_quest/quast-5.0.2/quast.py \
--o /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer \
+-o /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/result/refer \
 -r /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/scaffold_11_sequence.fasta \
 /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta  
