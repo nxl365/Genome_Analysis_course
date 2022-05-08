@@ -1,0 +1,3 @@
+### copy directory from fist path to current directory ###   
+
+cp -R /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result result
