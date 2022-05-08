@@ -1,0 +1,109 @@
+###################################
+after using ReatMasker: 
+mapping RNA_reads(after trimmed) to genome (after assembly):
+
+star manual:
+https://physiology.med.cornell.edu/faculty/skrabanek/lab/angsd/lecture_notes/STARmanual.pdf
+
+####################################
+
+
+
+#!/bin/bash -l
+
+#SBATCH -A uppmax2022-2-5
+#SBATCH -p core
+#SBATCH -n 8
+#SBATCH -t 00:20:00
+#SBATCH -J Mapping_star_11
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user nanxing.liu.3019@student.uu.se
+
+module load bioinfo-tools
+module load star
+
+##Generating genome indexes
+
+STAR --runThreadN 8 \
+--runMode genomeGenerate \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--genomeFastaFiles /home/nanxi/Genome_anaysis/analyses/09_DNA_masking/DNA_pilon_out.fasta.masked
+
+
+# Running mapping jobs
+
+# for one trimmed pair by step 05
+
+STAR --runThreadN 8 \
+--twopassMode Basic \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--readFilesIn /home/nanxi/Genome_anaysis/analyses/05_RNA_short_trim/RNA_short_trimmed_1P.fq.gz /home/nanxi/Genome_anaysis/analyses/05_RNA_short_trim/RNA_short_trimmed_2P.fq.gz \
+--outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040095_11_ \
+--readFilesCommand gunzip -c \
+--outSAMtype BAM Unsorted
+
+# for 8 trimmed pairs by teacher, each pair (2 fq.file) should be put in one STAR process
+
+STAR --runThreadN 8 \
+--twopassMode Basic \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040092_scaffold_11.* \
+--readFilesCommand gunzip -c \
+--outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040092_11_ \
+--outSAMtype BAM Unsorted
+
+STAR --runThreadN 8 \
+--twopassMode Basic \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040093_scaffold_11.* \
+--readFilesCommand gunzip -c \
+--outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040093_11_ \
+--outSAMtype BAM Unsorted
+
+STAR --runThreadN 8 \
+--twopassMode Basic \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040094_scaffold_11.* \
+--readFilesCommand gunzip -c \
+--outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040094_11_ \
+--outSAMtype BAM Unsorted
+
+STAR --runThreadN 8 \
+--twopassMode Basic \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040096_scaffold_11.* \
+--readFilesCommand gunzip -c \
+--outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040096_11_ \
+--outSAMtype BAM Unsorted
+
+STAR --runThreadN 8 \
+--twopassMode Basic \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040097_scaffold_11.* \
+--readFilesCommand gunzip -c \
+--outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040097_11_ \
+--outSAMtype BAM Unsorted
+
+STAR --runThreadN 8 \
+--twopassMode Basic \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6156066_scaffold_11.* \
+--readFilesCommand gunzip -c \
+--outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6156066_scaffold_11_ \
+--outSAMtype BAM Unsorted
+
+STAR --runThreadN 8 \
+--twopassMode Basic \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6156067_scaffold_11.* \
+--readFilesCommand gunzip -c \
+--outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6156067_scaffold_11_ \
+--outSAMtype BAM Unsorted
+
+STAR --runThreadN 8 \
+--twopassMode Basic \
+--genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index \
+--readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6156069_scaffold_11.* \
+--readFilesCommand gunzip -c \
+--outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6156069_scaffold_11_ \
+--outSAMtype BAM Unsorted
