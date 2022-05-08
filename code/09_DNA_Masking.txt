@@ -1,0 +1,27 @@
+#!/bin/bash -l
+
+#SBATCH -A uppmax2022-2-5
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 13:00:00
+#SBATCH -J DNA_masking_11
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user nanxing.liu.3019@student.uu.se
+
+module load bioinfo-tools
+module load RepeatModeler
+module load RepeatMasker
+
+### BuildDatabase
+
+BuildDatabase -name mydb /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta
+
+### RepeatModeler
+
+RepeatModeler -database mydb -pa 2
+
+### RepeatMasker
+
+RepeatMasker -pa 2 -xsmall -lib mydb-families.fa \
+-dir /home/nanxi/Genome_anaysis/analyses/09_DNA_masking \
+/home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta
