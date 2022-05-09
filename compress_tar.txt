@@ -1,0 +1,5 @@
+## tar.gz approach – can package multiple files into one .gz file
+
+tar -cvzf outputfile.tar.gz directory(where_all_input_files_are)/
+
+tar -cvzf outputfile.tar.gz path/one_input_file
