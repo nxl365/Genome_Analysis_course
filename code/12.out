@@ -1,17 +1,15 @@
+
 augustus/3.2.3_Perl5.24.1 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.2.3_Perl5.24.1'
-
 blast/2.2.31+ : the old-format NCBI blast databases are no longer updated after September 2019, use blast/2.9.0+ to search the latest NCBI databases
-
 GeneMark/4.33-es_Perl5.24.1 : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.33-es_Perl5.24.1'
 augustus/3.2.3_Perl5.24.1 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.2.3_Perl5.24.1'
 
-blast/2.2.31+ : the old-format NCBI blast databases are no longer updated after September 2019, use blast/2.9.0+ to search the latest NCBI databases
+The following have been reloaded with a version change:
+  1) blast/2.2.31+ => blast/2.9.0+
 
 GeneMark/4.33-es_Perl5.24.1 : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.33-es_Perl5.24.1'
 ‘/sw/bioinfo/GeneMark/4.33-es/snowy/gm_key’ -> ‘/home/nanxi/.gm_key’
-
 Copying Augustus config directory to current directory...adjusting permissions...updating AUGUSTUS_CONFIG_PATH...done
-
 export AUGUSTUS_CONFIG_PATH=/home/nanxi/Genome_anaysis/code/12_annotation_braker/augustus_config
-# Tue May 10 17:11:35 2022: Logfile: /crex/proj/genomeanalysis2022/nobackup/work/nanxi/analyses/12_annotation_braker/braker.log!
-# Tue May 10 17:22:59 2022 WARNING: Number of good genes is low (229). Recommended are at least 600 genes
+# Tue May 10 18:41:52 2022: Logfile: /crex/proj/genomeanalysis2022/nobackup/work/nanxi/analyses/12_annotation_braker/braker.log!
+# Tue May 10 18:52:27 2022 WARNING: Number of good genes is low (235). Recommended are at least 600 genes
