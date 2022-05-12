@@ -1,19 +1,35 @@
+I use mobaxterm in Windows
+
+
 ## intro https://www.uppmax.uu.se/support-sv/user-guides/transferring-files-2fa/ 
 ## ssh log in then log out once: 
 
 
+# for a directory
+scp -r
+
+# for a file
+rsync -P
+
+
 ### To transfer a local file to a remote comput:
-scp -r 
+scp -r file user@machine:/destination/path/
 rsync -P file user@machine:/destination/path/
 
+eg:
 rsync -P scaffold_11_sequence.fasta nanxi@rackham.uppmax.uu.se:/home/nanxi/ Genome_anaysis/analyses/08_DNA_quest/
 
 
 
 ### To transfer a file in a remote computer to our local machine:
-
+scp -r user@machine:/destination/path/file . 
 rsync -P user@machine:/destination/path/file .         # . to the local file: /home/mobaxterm
+
+eg:
+scp -r nanxi@rackham.UPPMAX.uu.se:/proj/genomeanalysis2022/nobackup/work/nanxi/analyses/15_readcount_HTSeq .
 
 rsync -P nanxi@rackham.UPPMAX.uu.se:/proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/no_refer/report.html .
 
 
+// by default, the path of local file: Documents/home/mobaxterm   
+// can check with "pwd"
