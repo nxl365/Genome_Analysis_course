@@ -17,8 +17,8 @@ module load bioinfo-tools
 module load canu
 
 canu \
- -p DNA_pacbio_assembly_11 -d /home/nanxi/Genome_anaysis/analyses/01_DNA_assembly \
+ -p DNA_pacbio_assembly_11 -d /home/nanxi/Genome_anaysis/analyses/01_DNA_assembly \                                 # output
  genomeSize=24m \
  useGrid=false \
- -pacbio-raw /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/pacbio_data/SRR6037732_scaffold_11.fq.gz
+ -pacbio-raw /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/pacbio_data/SRR6037732_scaffold_11.fq.gz      # input
 
