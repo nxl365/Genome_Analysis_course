@@ -18,4 +18,4 @@ scancel -M snowy <job.sh/.job>
 
 
 ### we can run the job.sh in terminal directly to check error fast maybe:
-bash -M snowy <job.sh>
+bash <job.sh>
