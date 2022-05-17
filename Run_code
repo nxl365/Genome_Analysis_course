@@ -1,0 +1,21 @@
+####connect to UPPMAX ：
+ssh -AX <username>@rackham.uppmax.uu.se 
+
+
+### Run bash job:
+sbatch -M snowy <job.sh/.job>
+
+### check bash job info：
+squeue -M snowy -u <username>
+jobinfo -M snowy -u <username>
+
+###cancel bash job:
+scancel -M snowy <job.sh/.job>
+
+
+### check situation of job running:
+### after sbatch job, we will get a slurm-jobnumber file , to check the sitation of running(like errors...)
+
+
+### we can run the job.sh in terminal directly to check error fast maybe:
+bash -M snowy <job.sh>
