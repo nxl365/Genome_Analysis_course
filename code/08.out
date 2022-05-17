@@ -1,0 +1,141 @@
+/home/nanxi/Genome_anaysis/code/08_DNA_quest/quast-5.0.2/quast.py -o /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/no_refer /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta
+
+Version: 5.0.2, 0bb1dd1b
+
+System information:
+  OS: Linux-3.10.0-1160.62.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.3
+  CPUs number: 16
+
+Started: 2022-05-07 16:39:39
+
+Logging to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/no_refer/quast.log
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+CWD: /domus/h1/nanxi/Genome_anaysis/code/08_DNA_quest
+Main parameters: 
+  MODE: default, threads: 4, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+WARNING: Can't draw plots: python-matplotlib is missing or corrupted.
+
+Contigs:
+  Pre-processing...
+  /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta ==> DNA_pilon_out
+
+2022-05-07 16:39:41
+Running Basic statistics processor...
+  Contig files: 
+    DNA_pilon_out
+  Calculating N50 and L50...
+    DNA_pilon_out, N50 = 193467, L50 = 29, Total length = 32799705, GC % = 30.84, # N's per 100 kbp =  0.00
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2022-05-07 16:39:43
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 1: Creating Icarus viewers...
+Done
+
+2022-05-07 16:39:43
+RESULTS:
+  Text versions of total report are saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/no_refer/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/no_refer/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/no_refer/report.html
+  Icarus (contig browser) is saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/no_refer/icarus.html
+  Log is saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/no_refer/quast.log
+
+Finished: 2022-05-07 16:39:43
+Elapsed time: 0:00:03.938586
+NOTICEs: 2; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
+/home/nanxi/Genome_anaysis/code/08_DNA_quest/quast-5.0.2/quast.py -o /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer -r /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/scaffold_11_sequence.fasta /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta
+
+Version: 5.0.2, 0bb1dd1b
+
+System information:
+  OS: Linux-3.10.0-1160.62.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.3
+  CPUs number: 16
+
+Started: 2022-05-07 16:39:44
+
+Logging to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/quast.log
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+CWD: /domus/h1/nanxi/Genome_anaysis/code/08_DNA_quest
+Main parameters: 
+  MODE: default, threads: 4, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+WARNING: Can't draw plots: python-matplotlib is missing or corrupted.
+
+Reference:
+  /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/scaffold_11_sequence.fasta ==> scaffold_11_sequence
+
+Contigs:
+  Pre-processing...
+  /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta ==> DNA_pilon_out
+
+2022-05-07 16:39:46
+Running Basic statistics processor...
+  Reference genome:
+    scaffold_11_sequence.fasta, length = 23775123, num fragments = 1, GC % = 30.18
+  Contig files: 
+    DNA_pilon_out
+  Calculating N50 and L50...
+    DNA_pilon_out, N50 = 193467, L50 = 29, Total length = 32799705, GC % = 30.84, # N's per 100 kbp =  0.00
+Done.
+
+2022-05-07 16:39:50
+Running Contig analyzer...
+  DNA_pilon_out
+  Logging to files /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/contigs_reports/contigs_report_DNA_pilon_out.stdout and contigs_report_DNA_pilon_out.stderr...
+  Aligning contigs to the reference
+  Analysis is finished.
+  Creating total report...
+    saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+Done.
+
+2022-05-07 16:40:13
+Running NA-NGA calculation...
+  DNA_pilon_out, Largest alignment = 1194842, NA50 = 119343, NGA50 = 201779, LA50 = 55, LGA50 = 26
+Done.
+
+2022-05-07 16:40:14
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  DNA_pilon_out
+  Analysis is finished.
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2022-05-07 16:40:23
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 1: Creating Icarus viewers...
+Done
+
+2022-05-07 16:40:24
+RESULTS:
+  Text versions of total report are saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/report.html
+  Icarus (contig browser) is saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/icarus.html
+  Log is saved to /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/08_DNA_quest/result/refer/quast.log
+
+Finished: 2022-05-07 16:40:24
+Elapsed time: 0:00:40.306811
+NOTICEs: 4; WARNINGs: 1; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
