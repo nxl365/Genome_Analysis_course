@@ -16,7 +16,7 @@ quest.sh
 #SBATCH -A uppmax2022-2-5
 #SBATCH -p core
 #SBATCH -n 2
-#SBATCH -t 00:00:10
+#SBATCH -t 00:10:00
 #SBATCH -J DNA_Quast_11
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user nanxing.liu.3019@student.uu.se
@@ -35,3 +35,11 @@ python /home/nanxi/Genome_anaysis/code/08_DNA_quest/quast-5.0.2/quast.py \
 /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta  
 
 # with reference, assembly genome of Canu_BWA_Pilon, assembly genome of Canu
+
+python /home/nanxi/Genome_anaysis/code/08_DNA_quest/quast-5.0.2/quast.py \
+-o /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/result/quast_both_refer \
+-r /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/scaffold_11_sequence.fasta \
+/home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta \
+/home/nanxi/Genome_anaysis/analyses/01_DNA_assembly/DNA_pacbio_assembly_11.contigs.fasta
+
+
