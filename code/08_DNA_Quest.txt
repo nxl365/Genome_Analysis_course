@@ -21,12 +21,17 @@ quest.sh
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user nanxing.liu.3019@student.uu.se
 
+# no reference, only assembly genome of Canu_BWA_pilon
 
 python /home/nanxi/Genome_anaysis/code/08_DNA_quest/quast-5.0.2/quast.py \
 -o /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/result/no_refer \
 /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta
 
+# with reference, and assembly genome of Canu_BWA_pilon
+
 python /home/nanxi/Genome_anaysis/code/08_DNA_quest/quast-5.0.2/quast.py \
 -o /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/result/refer \
 -r /home/nanxi/Genome_anaysis/analyses/08_DNA_quest/scaffold_11_sequence.fasta \
 /home/nanxi/Genome_anaysis/analyses/07_DNA_pilon/DNA_pilon_out.fasta  
+
+# with reference, assembly genome of Canu_BWA_Pilon, assembly genome of Canu
