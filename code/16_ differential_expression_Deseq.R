@@ -102,3 +102,11 @@ log2.counts<-assay(nt)[order_select,]
 dataf<-as.data.frame(colData(dds))
 
 pheatmap(log2.counts,cluster_rows = TRUE,show_rownames = TRUE,cluster_cols = TRUE,annotation_col = dataf)
+
+
+## another way of heatmap
+topVarGenes <- head(order(rowVars(assay(rld)), decreasing = TRUE), 10)
+
+heatmap.2( assay(rld)[topVarGenes, ], scale = "row",
+           trace="none", dendrogram="column",
+           col = colorRampPalette(rev(brewer.pal(9, "RdBu")))(255), margins = c(6,10))
