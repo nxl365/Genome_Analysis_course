@@ -3,7 +3,7 @@
 #SBATCH -A uppmax2022-2-5
 #SBATCH -p core
 #SBATCH -n 8
-#SBATCH -t 24s:00:00
+#SBATCH -t 24:00:00
 #SBATCH -J trinity_11
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user nanxing.liu.3019@student.uu.se
