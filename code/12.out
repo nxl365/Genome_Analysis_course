@@ -1,4 +1,3 @@
-
 augustus/3.2.3_Perl5.24.1 : If you see errors about not being able to write to an augustus directory, see 'module help augustus/3.2.3_Perl5.24.1'
 blast/2.2.31+ : the old-format NCBI blast databases are no longer updated after September 2019, use blast/2.9.0+ to search the latest NCBI databases
 GeneMark/4.33-es_Perl5.24.1 : A recent key file is needed to use this software and it must exist in your home directory. See 'module help GeneMark/4.33-es_Perl5.24.1'
