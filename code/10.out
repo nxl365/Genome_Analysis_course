@@ -1,0 +1,108 @@
+	STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --genomeFastaFiles /home/nanxi/Genome_anaysis/analyses/09_DNA_masking/DNA_pilon_out.fasta.masked
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:19:11 ..... started STAR run
+!!!!! WARNING: Could not move Log.out file from ./Log.out into /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index/Log.out. Will keep ./Log.out
+
+May 08 23:19:11 ... starting to generate Genome files
+!!!!! WARNING: --genomeSAindexNbases 14 is too large for the genome size=32799705, which may cause seg-fault at the mapping step. Re-run genome generation with recommended --genomeSAindexNbases 11
+May 08 23:19:12 ... starting to sort Suffix Array. This may take a long time...
+May 08 23:19:13 ... sorting Suffix Array chunks and saving them to disk...
+May 08 23:19:21 ... loading chunks from disk, packing SA...
+May 08 23:19:23 ... finished generating suffix array
+May 08 23:19:23 ... generating Suffix Array index
+May 08 23:19:37 ... completed Suffix Array index
+May 08 23:19:37 ... writing Genome to disk ...
+May 08 23:19:38 ... writing Suffix Array to disk ...
+May 08 23:19:38 ... writing SAindex to disk
+May 08 23:19:40 ..... finished successfully
+	STAR --runThreadN 8 --twopassMode Basic --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --readFilesIn /home/nanxi/Genome_anaysis/analyses/05_RNA_short_trim/RNA_short_trimmed_1P.fq.gz /home/nanxi/Genome_anaysis/analyses/05_RNA_short_trim/RNA_short_trimmed_2P.fq.gz --outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040095_11_ --readFilesCommand gunzip -c " "
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:19:40 ..... started STAR run
+May 08 23:19:40 ..... loading genome
+May 08 23:19:41 ..... started 1st pass mapping
+May 08 23:20:18 ..... finished 1st pass mapping
+May 08 23:20:18 ..... inserting junctions into the genome indices
+May 08 23:20:33 ..... started mapping
+May 08 23:21:13 ..... finished mapping
+May 08 23:21:13 ..... finished successfully
+/var/spool/slurmd/job6189402/slurm_script: line 32: --outSAMtype: command not found
+	STAR --runThreadN 8 --twopassMode Basic --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040092_scaffold_11.1.fastq.gz /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040092_scaffold_11.2.fastq.gz --readFilesCommand gunzip -c --outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040092_11_ --outSAMtype BAM Unsorted
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:21:13 ..... started STAR run
+May 08 23:21:13 ..... loading genome
+May 08 23:21:15 ..... started 1st pass mapping
+May 08 23:21:50 ..... finished 1st pass mapping
+May 08 23:21:50 ..... inserting junctions into the genome indices
+May 08 23:22:05 ..... started mapping
+May 08 23:22:46 ..... finished mapping
+May 08 23:22:47 ..... finished successfully
+	STAR --runThreadN 8 --twopassMode Basic --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040093_scaffold_11.1.fastq.gz /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040093_scaffold_11.2.fastq.gz --readFilesCommand gunzip -c --outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040093_11_ --outSAMtype BAM Unsorted
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:22:47 ..... started STAR run
+May 08 23:22:47 ..... loading genome
+May 08 23:22:49 ..... started 1st pass mapping
+May 08 23:23:13 ..... finished 1st pass mapping
+May 08 23:23:13 ..... inserting junctions into the genome indices
+May 08 23:23:28 ..... started mapping
+May 08 23:23:53 ..... finished mapping
+May 08 23:23:54 ..... finished successfully
+	STAR --runThreadN 8 --twopassMode Basic --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040094_scaffold_11.1.fastq.gz /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040094_scaffold_11.2.fastq.gz --readFilesCommand gunzip -c --outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040094_11_ --outSAMtype BAM Unsorted
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:23:54 ..... started STAR run
+May 08 23:23:54 ..... loading genome
+May 08 23:23:55 ..... started 1st pass mapping
+May 08 23:24:32 ..... finished 1st pass mapping
+May 08 23:24:32 ..... inserting junctions into the genome indices
+May 08 23:24:47 ..... started mapping
+May 08 23:25:31 ..... finished mapping
+May 08 23:25:31 ..... finished successfully
+	STAR --runThreadN 8 --twopassMode Basic --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040096_scaffold_11.1.fastq.gz /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040096_scaffold_11.2.fastq.gz --readFilesCommand gunzip -c --outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040096_11_ --outSAMtype BAM Unsorted
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:25:31 ..... started STAR run
+May 08 23:25:32 ..... loading genome
+May 08 23:25:33 ..... started 1st pass mapping
+May 08 23:26:04 ..... finished 1st pass mapping
+May 08 23:26:04 ..... inserting junctions into the genome indices
+May 08 23:26:20 ..... started mapping
+May 08 23:26:55 ..... finished mapping
+May 08 23:26:55 ..... finished successfully
+	STAR --runThreadN 8 --twopassMode Basic --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040097_scaffold_11.1.fastq.gz /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6040097_scaffold_11.2.fastq.gz --readFilesCommand gunzip -c --outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6040097_11_ --outSAMtype BAM Unsorted
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:26:55 ..... started STAR run
+May 08 23:26:55 ..... loading genome
+May 08 23:26:57 ..... started 1st pass mapping
+May 08 23:27:11 ..... finished 1st pass mapping
+May 08 23:27:11 ..... inserting junctions into the genome indices
+May 08 23:27:25 ..... started mapping
+May 08 23:27:43 ..... finished mapping
+May 08 23:27:43 ..... finished successfully
+	STAR --runThreadN 8 --twopassMode Basic --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6156066_scaffold_11.1.fastq.gz /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6156066_scaffold_11.2.fastq.gz --readFilesCommand gunzip -c --outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6156066_scaffold_11_ --outSAMtype BAM Unsorted
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:27:43 ..... started STAR run
+May 08 23:27:43 ..... loading genome
+May 08 23:27:45 ..... started 1st pass mapping
+May 08 23:28:13 ..... finished 1st pass mapping
+May 08 23:28:13 ..... inserting junctions into the genome indices
+May 08 23:28:27 ..... started mapping
+May 08 23:29:13 ..... finished mapping
+May 08 23:29:14 ..... finished successfully
+	STAR --runThreadN 8 --twopassMode Basic --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6156067_scaffold_11.1.fastq.gz /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6156067_scaffold_11.2.fastq.gz --readFilesCommand gunzip -c --outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6156067_scaffold_11_ --outSAMtype BAM Unsorted
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:29:14 ..... started STAR run
+May 08 23:29:14 ..... loading genome
+May 08 23:29:15 ..... started 1st pass mapping
+May 08 23:29:38 ..... finished 1st pass mapping
+May 08 23:29:38 ..... inserting junctions into the genome indices
+May 08 23:29:53 ..... started mapping
+May 08 23:30:17 ..... finished mapping
+May 08 23:30:17 ..... finished successfully
+	STAR --runThreadN 8 --twopassMode Basic --genomeDir /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/genome_index --readFilesIn /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6156069_scaffold_11.1.fastq.gz /home/nanxi/Genome_anaysis/data/raw_data/4_Tean_Teh_2017/transcriptome/trimmed/SRR6156069_scaffold_11.2.fastq.gz --readFilesCommand gunzip -c --outFileNamePrefix /proj/genomeanalysis2022/nobackup/work/nanxi/analyses/10_RNA_map_star/mapping/SRR6156069_scaffold_11_ --outSAMtype BAM Unsorted
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 08 23:30:18 ..... started STAR run
+May 08 23:30:18 ..... loading genome
+May 08 23:30:19 ..... started 1st pass mapping
+May 08 23:30:45 ..... finished 1st pass mapping
+May 08 23:30:45 ..... inserting junctions into the genome indices
+May 08 23:31:00 ..... started mapping
+May 08 23:31:33 ..... finished mapping
+May 08 23:31:34 ..... finished successfully
