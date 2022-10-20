@@ -23,7 +23,7 @@ rsync -P scaffold_11_sequence.fasta nanxi@rackham.uppmax.uu.se:/home/nanxi/ Geno
 
 ### To transfer a file in a remote computer to our local machine:
 scp -r user@machine:/destination/path/file . 
-rsync -P user@machine:/destination/path/file .         # . to the local file: /home/mobaxterm
+rsync -P user@machine:/destination/path/file .         # . to the local current folder (here is: /home/mobaxterm )
 
 eg:
 scp -r nanxi@rackham.UPPMAX.uu.se:/proj/genomeanalysis2022/nobackup/work/nanxi/analyses/15_readcount_HTSeq .
@@ -32,4 +32,5 @@ rsync -P nanxi@rackham.UPPMAX.uu.se:/proj/genomeanalysis2022/nobackup/work/nanxi
 
 
 // by default, the path of local file: Documents/home/mobaxterm   
-// can check with "pwd"
+// can use "pwd" to check current folder
+// or in advance, "cd" to the local folder you wanna, then use "."
